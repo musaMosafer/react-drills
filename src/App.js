@@ -3,17 +3,12 @@ import Hello from "./Hello";
 import "./App.css";
 
 function App() {
-  const users = [
-    {
-      firstname: "younes",
-      lastname: "ghorbany",
-    },
-  ];
+  const user = "younes";
 
-  const element = <h1>{users[0].firstname}</h1>;
   return (
     <div className="App">
-      {element}
+      {user ? <h1>Hello, {user}</h1> : <h1>Hello, user</h1>}
+
       <Hello />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
